@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+
+    <a href = "index.php"> <img src="eitalos14.png" alt="logo" />  </a>
+	
+	<img src="skroutz3.png" height = "130 alt= "logo" />
+    <div class="topnav">
+  <a  href="index.php">Home</a>
+  <a href="products.php">Products</a>
+  <?php 
+				if ( isset($_SESSION['customer_id'])) {
+			echo '<a href="logout.php">Logout</a>';
+	} 			else {
+			echo '<a href="login.php">Login</a>';
+	}
+			
+  
+			if ( isset($_SESSION['customer_id'])) {
+				echo '<a href="myaccount.php">My account</a>';
+			} else {
+					echo '<a href="register.php">Register</a>';
+				}
+			?>
+   <a href="mycart.php">My Cart</a>
+   
+   <a href="about.php">About</a>
+</div>
+  </header>
+  
+ 
+</html>
